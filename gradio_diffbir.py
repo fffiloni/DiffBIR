@@ -123,7 +123,7 @@ def process(
     return preds
 
 
-block = gr.Blocks().queue()
+block = gr.Blocks()
 with block:
     with gr.Row():
         gr.Markdown("## DiffBIR")
@@ -172,4 +172,4 @@ with block:
     ]
     run_button.click(fn=process, inputs=inputs, outputs=[result_gallery])
 
-block.launch(server_name='0.0.0.0', share=False)
+block.queue().launch(server_name='0.0.0.0', share=False)
