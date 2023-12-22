@@ -172,4 +172,4 @@ with block:
     ]
     run_button.click(fn=process, inputs=inputs, outputs=[result_gallery])
 
-block.queue().launch(server_name='0.0.0.0', share=False)
+block.queue().launch(server_name='0.0.0.0', share=False, show_api=False)
